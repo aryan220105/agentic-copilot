@@ -1,0 +1,420 @@
+[
+    {
+        "student_id": 1,
+        "username": "student_low_1",
+        "baseline": "low",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "uninitialized_variable"
+                ]
+            },
+            {
+                "question_id": 2,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "type_coercion_error"
+                ]
+            },
+            {
+                "question_id": 3,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "integer_division_confusion"
+                ]
+            },
+            {
+                "question_id": 5,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "off_by_one"
+                ]
+            },
+            {
+                "question_id": 7,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "array_indexing_error"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 2,
+        "username": "student_low_2",
+        "baseline": "low",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 2,
+                "response": "C",
+                "is_correct": false,
+                "misconceptions": [
+                    "type_coercion_error"
+                ]
+            },
+            {
+                "question_id": 4,
+                "response": "D",
+                "is_correct": false,
+                "misconceptions": [
+                    "wrong_condition_logic"
+                ]
+            },
+            {
+                "question_id": 5,
+                "response": "C",
+                "is_correct": false,
+                "misconceptions": [
+                    "off_by_one"
+                ]
+            },
+            {
+                "question_id": 6,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "return_vs_print"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 3,
+        "username": "student_medium_1",
+        "baseline": "medium",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 2,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 3,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 4,
+                "response": "A",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 5,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "off_by_one"
+                ]
+            },
+            {
+                "question_id": 7,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "array_indexing_error"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 4,
+        "username": "student_medium_2",
+        "baseline": "medium",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 2,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 5,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 6,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "return_vs_print"
+                ]
+            },
+            {
+                "question_id": 9,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "wrong_loop_condition"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 5,
+        "username": "student_medium_3",
+        "baseline": "medium",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 3,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "integer_division_confusion"
+                ]
+            },
+            {
+                "question_id": 4,
+                "response": "A",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 7,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 8,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            }
+        ]
+    },
+    {
+        "student_id": 6,
+        "username": "student_high_1",
+        "baseline": "high",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 2,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 3,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 4,
+                "response": "A",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 5,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 9,
+                "response": "A",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 10,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            }
+        ]
+    },
+    {
+        "student_id": 7,
+        "username": "student_high_2",
+        "baseline": "high",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 2,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 5,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 6,
+                "response": "A",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 10,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "nested_loop_complexity"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 8,
+        "username": "student_low_3",
+        "baseline": "low",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "D",
+                "is_correct": false,
+                "misconceptions": [
+                    "assignment_vs_equality"
+                ]
+            },
+            {
+                "question_id": 2,
+                "response": "D",
+                "is_correct": false,
+                "misconceptions": [
+                    "type_coercion_error"
+                ]
+            },
+            {
+                "question_id": 3,
+                "response": "D",
+                "is_correct": false,
+                "misconceptions": [
+                    "integer_division_confusion"
+                ]
+            },
+            {
+                "question_id": 4,
+                "response": "C",
+                "is_correct": false,
+                "misconceptions": [
+                    "wrong_condition_logic"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 9,
+        "username": "student_medium_4",
+        "baseline": "medium",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "C",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 2,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 3,
+                "response": "B",
+                "is_correct": true,
+                "misconceptions": []
+            },
+            {
+                "question_id": 5,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "off_by_one"
+                ]
+            },
+            {
+                "question_id": 7,
+                "response": "A",
+                "is_correct": false,
+                "misconceptions": [
+                    "array_indexing_error"
+                ]
+            }
+        ]
+    },
+    {
+        "student_id": 10,
+        "username": "student_low_4",
+        "baseline": "low",
+        "attempts": [
+            {
+                "question_id": 1,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "uninitialized_variable"
+                ]
+            },
+            {
+                "question_id": 5,
+                "response": "C",
+                "is_correct": false,
+                "misconceptions": [
+                    "off_by_one"
+                ]
+            },
+            {
+                "question_id": 6,
+                "response": "B",
+                "is_correct": false,
+                "misconceptions": [
+                    "return_vs_print"
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,584 @@
+{
+    "mcq_questions": [
+        {
+            "id": 1,
+            "concept": "variables",
+            "difficulty": "easy",
+            "prompt": "What will be the value of `x` after executing the following code?\n\n```python\nx = 5\nx = x + 3\n```",
+            "options": {
+                "A": "5",
+                "B": "3",
+                "C": "8",
+                "D": "Error"
+            },
+            "correct_answer": "C",
+            "is_pretest": true
+        },
+        {
+            "id": 2,
+            "concept": "types",
+            "difficulty": "easy",
+            "prompt": "What is the type of the value `3.14` in Python?",
+            "options": {
+                "A": "int",
+                "B": "float",
+                "C": "str",
+                "D": "double"
+            },
+            "correct_answer": "B",
+            "is_pretest": true
+        },
+        {
+            "id": 3,
+            "concept": "operators",
+            "difficulty": "easy",
+            "prompt": "What is the result of `10 // 3` in Python?",
+            "options": {
+                "A": "3.33",
+                "B": "3",
+                "C": "4",
+                "D": "1"
+            },
+            "correct_answer": "B",
+            "is_pretest": true
+        },
+        {
+            "id": 4,
+            "concept": "conditionals",
+            "difficulty": "medium",
+            "prompt": "What will this code print?\n\n```python\nx = 10\nif x > 5:\n    print('A')\nelif x > 8:\n    print('B')\nelse:\n    print('C')\n```",
+            "options": {
+                "A": "A",
+                "B": "B",
+                "C": "C",
+                "D": "A and B"
+            },
+            "correct_answer": "A",
+            "is_pretest": true
+        },
+        {
+            "id": 5,
+            "concept": "loops",
+            "difficulty": "medium",
+            "prompt": "How many times will 'Hello' be printed?\n\n```python\nfor i in range(3):\n    print('Hello')\n```",
+            "options": {
+                "A": "2",
+                "B": "3",
+                "C": "4",
+                "D": "1"
+            },
+            "correct_answer": "B",
+            "is_pretest": true
+        },
+        {
+            "id": 6,
+            "concept": "functions",
+            "difficulty": "medium",
+            "prompt": "What is the output of this code?\n\n```python\ndef greet(name):\n    return 'Hello, ' + name\n\nresult = greet('Alice')\nprint(result)\n```",
+            "options": {
+                "A": "Hello, Alice",
+                "B": "None",
+                "C": "Hello, name",
+                "D": "Error"
+            },
+            "correct_answer": "A",
+            "is_pretest": true
+        },
+        {
+            "id": 7,
+            "concept": "arrays",
+            "difficulty": "medium",
+            "prompt": "What will `nums[2]` return?\n\n```python\nnums = [10, 20, 30, 40]\n```",
+            "options": {
+                "A": "10",
+                "B": "20",
+                "C": "30",
+                "D": "40"
+            },
+            "correct_answer": "C",
+            "is_pretest": true
+        },
+        {
+            "id": 8,
+            "concept": "strings",
+            "difficulty": "easy",
+            "prompt": "What is the length of the string `'Python'`?",
+            "options": {
+                "A": "5",
+                "B": "6",
+                "C": "7",
+                "D": "4"
+            },
+            "correct_answer": "B",
+            "is_pretest": true
+        },
+        {
+            "id": 9,
+            "concept": "loops",
+            "difficulty": "hard",
+            "prompt": "What is the last value printed?\n\n```python\ni = 0\nwhile i < 5:\n    print(i)\n    i += 2\n```",
+            "options": {
+                "A": "4",
+                "B": "5",
+                "C": "6",
+                "D": "2"
+            },
+            "correct_answer": "A",
+            "is_pretest": true
+        },
+        {
+            "id": 10,
+            "concept": "complexity",
+            "difficulty": "hard",
+            "prompt": "What is the time complexity of the following code?\n\n```python\nfor i in range(n):\n    for j in range(n):\n        print(i, j)\n```",
+            "options": {
+                "A": "O(n)",
+                "B": "O(n log n)",
+                "C": "O(n^2)",
+                "D": "O(2n)"
+            },
+            "correct_answer": "C",
+            "is_pretest": true
+        },
+        {
+            "id": 11,
+            "concept": "variables",
+            "difficulty": "medium",
+            "prompt": "What will be the output?\n\n```python\na = 5\nb = a\na = 10\nprint(b)\n```",
+            "options": {
+                "A": "5",
+                "B": "10",
+                "C": "15",
+                "D": "Error"
+            },
+            "correct_answer": "A",
+            "is_posttest": true
+        },
+        {
+            "id": 12,
+            "concept": "types",
+            "difficulty": "medium",
+            "prompt": "What is the result of `'3' + '5'` in Python?",
+            "options": {
+                "A": "8",
+                "B": "35",
+                "C": "Error",
+                "D": "53"
+            },
+            "correct_answer": "B",
+            "is_posttest": true
+        },
+        {
+            "id": 13,
+            "concept": "conditionals",
+            "difficulty": "hard",
+            "prompt": "What is printed?\n\n```python\nx = 0\nif x:\n    print('A')\nelse:\n    print('B')\n```",
+            "options": {
+                "A": "A",
+                "B": "B",
+                "C": "0",
+                "D": "Error"
+            },
+            "correct_answer": "B",
+            "is_posttest": true
+        },
+        {
+            "id": 14,
+            "concept": "functions",
+            "difficulty": "hard",
+            "prompt": "What does this function return?\n\n```python\ndef mystery(n):\n    if n <= 1:\n        return n\n    return mystery(n-1) + mystery(n-2)\n\nmystery(5)\n```",
+            "options": {
+                "A": "5",
+                "B": "8",
+                "C": "3",
+                "D": "13"
+            },
+            "correct_answer": "A",
+            "is_posttest": true
+        },
+        {
+            "id": 15,
+            "concept": "arrays",
+            "difficulty": "hard",
+            "prompt": "What is the output?\n\n```python\nnums = [1, 2, 3]\nnums.append(4)\nprint(len(nums))\n```",
+            "options": {
+                "A": "3",
+                "B": "4",
+                "C": "5",
+                "D": "Error"
+            },
+            "correct_answer": "B",
+            "is_posttest": true
+        }
+    ],
+    "coding_questions": [
+        {
+            "id": 101,
+            "concept": "variables",
+            "difficulty": "easy",
+            "prompt": "Write a function `swap_values(a, b)` that returns a tuple with the values swapped.",
+            "starter_code": "def swap_values(a, b):\n    # Your code here\n    pass",
+            "solution": "def swap_values(a, b):\n    return (b, a)",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            1,
+                            2
+                        ],
+                        "expected": [
+                            2,
+                            1
+                        ]
+                    },
+                    {
+                        "input": [
+                            5,
+                            10
+                        ],
+                        "expected": [
+                            10,
+                            5
+                        ]
+                    },
+                    {
+                        "input": [
+                            "a",
+                            "b"
+                        ],
+                        "expected": [
+                            "b",
+                            "a"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 102,
+            "concept": "types",
+            "difficulty": "easy",
+            "prompt": "Write a function `to_int(s)` that converts a string to an integer.",
+            "starter_code": "def to_int(s):\n    # Your code here\n    pass",
+            "solution": "def to_int(s):\n    return int(s)",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            "42"
+                        ],
+                        "expected": 42
+                    },
+                    {
+                        "input": [
+                            "100"
+                        ],
+                        "expected": 100
+                    },
+                    {
+                        "input": [
+                            "-5"
+                        ],
+                        "expected": -5
+                    }
+                ]
+            }
+        },
+        {
+            "id": 103,
+            "concept": "loops",
+            "difficulty": "medium",
+            "prompt": "Write a function `sum_range(n)` that returns the sum of numbers from 1 to n (inclusive).",
+            "starter_code": "def sum_range(n):\n    # Your code here\n    pass",
+            "solution": "def sum_range(n):\n    total = 0\n    for i in range(1, n + 1):\n        total += i\n    return total",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            5
+                        ],
+                        "expected": 15
+                    },
+                    {
+                        "input": [
+                            10
+                        ],
+                        "expected": 55
+                    },
+                    {
+                        "input": [
+                            1
+                        ],
+                        "expected": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": 104,
+            "concept": "conditionals",
+            "difficulty": "medium",
+            "prompt": "Write a function `is_even(n)` that returns True if n is even, False otherwise.",
+            "starter_code": "def is_even(n):\n    # Your code here\n    pass",
+            "solution": "def is_even(n):\n    return n % 2 == 0",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            4
+                        ],
+                        "expected": true
+                    },
+                    {
+                        "input": [
+                            7
+                        ],
+                        "expected": false
+                    },
+                    {
+                        "input": [
+                            0
+                        ],
+                        "expected": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 105,
+            "concept": "functions",
+            "difficulty": "medium",
+            "prompt": "Write a function `factorial(n)` that returns the factorial of n.",
+            "starter_code": "def factorial(n):\n    # Your code here\n    pass",
+            "solution": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            5
+                        ],
+                        "expected": 120
+                    },
+                    {
+                        "input": [
+                            0
+                        ],
+                        "expected": 1
+                    },
+                    {
+                        "input": [
+                            3
+                        ],
+                        "expected": 6
+                    }
+                ]
+            }
+        },
+        {
+            "id": 106,
+            "concept": "arrays",
+            "difficulty": "medium",
+            "prompt": "Write a function `find_max(nums)` that returns the maximum value in a list.",
+            "starter_code": "def find_max(nums):\n    # Your code here\n    pass",
+            "solution": "def find_max(nums):\n    if not nums:\n        return None\n    max_val = nums[0]\n    for n in nums:\n        if n > max_val:\n            max_val = n\n    return max_val",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            [
+                                1,
+                                5,
+                                3,
+                                9,
+                                2
+                            ]
+                        ],
+                        "expected": 9
+                    },
+                    {
+                        "input": [
+                            [
+                                -1,
+                                -5,
+                                -3
+                            ]
+                        ],
+                        "expected": -1
+                    },
+                    {
+                        "input": [
+                            [
+                                42
+                            ]
+                        ],
+                        "expected": 42
+                    }
+                ]
+            }
+        },
+        {
+            "id": 107,
+            "concept": "strings",
+            "difficulty": "medium",
+            "prompt": "Write a function `reverse_string(s)` that returns the reversed string.",
+            "starter_code": "def reverse_string(s):\n    # Your code here\n    pass",
+            "solution": "def reverse_string(s):\n    return s[::-1]",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            "hello"
+                        ],
+                        "expected": "olleh"
+                    },
+                    {
+                        "input": [
+                            "Python"
+                        ],
+                        "expected": "nohtyP"
+                    },
+                    {
+                        "input": [
+                            "a"
+                        ],
+                        "expected": "a"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 108,
+            "concept": "loops",
+            "difficulty": "hard",
+            "prompt": "Write a function `count_vowels(s)` that returns the count of vowels in the string.",
+            "starter_code": "def count_vowels(s):\n    # Your code here\n    pass",
+            "solution": "def count_vowels(s):\n    vowels = 'aeiouAEIOU'\n    count = 0\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            "hello"
+                        ],
+                        "expected": 2
+                    },
+                    {
+                        "input": [
+                            "AEIOU"
+                        ],
+                        "expected": 5
+                    },
+                    {
+                        "input": [
+                            "xyz"
+                        ],
+                        "expected": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": 109,
+            "concept": "arrays",
+            "difficulty": "hard",
+            "prompt": "Write a function `remove_duplicates(nums)` that returns a new list with duplicates removed.",
+            "starter_code": "def remove_duplicates(nums):\n    # Your code here\n    pass",
+            "solution": "def remove_duplicates(nums):\n    seen = set()\n    result = []\n    for n in nums:\n        if n not in seen:\n            seen.add(n)\n            result.append(n)\n    return result",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            [
+                                1,
+                                2,
+                                2,
+                                3,
+                                3,
+                                3
+                            ]
+                        ],
+                        "expected": [
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "input": [
+                            [
+                                1,
+                                1,
+                                1
+                            ]
+                        ],
+                        "expected": [
+                            1
+                        ]
+                    },
+                    {
+                        "input": [
+                            [
+                                1,
+                                2,
+                                3
+                            ]
+                        ],
+                        "expected": [
+                            1,
+                            2,
+                            3
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 110,
+            "concept": "complexity",
+            "difficulty": "hard",
+            "prompt": "Write a function `binary_search(nums, target)` that returns the index of target in sorted list nums, or -1 if not found.",
+            "starter_code": "def binary_search(nums, target):\n    # Your code here\n    pass",
+            "solution": "def binary_search(nums, target):\n    left, right = 0, len(nums) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if nums[mid] == target:\n            return mid\n        elif nums[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+            "test_cases": {
+                "tests": [
+                    {
+                        "input": [
+                            [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5
+                            ],
+                            3
+                        ],
+                        "expected": 2
+                    },
+                    {
+                        "input": [
+                            [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5
+                            ],
+                            6
+                        ],
+                        "expected": -1
+                    },
+                    {
+                        "input": [
+                            [
+                                10,
+                                20,
+                                30
+                            ],
+                            10
+                        ],
+                        "expected": 0
+                    }
+                ]
+            }
+        }
+    ]
+}

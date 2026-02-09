@@ -1,0 +1,178 @@
+{
+    "description": "Expert-labeled misconceptions for evaluation of diagnostic agent accuracy",
+    "version": "1.0",
+    "labels": [
+        {
+            "question_id": 1,
+            "student_response": "A",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "uninitialized_variable"
+            ],
+            "notes": "Student likely thought x stays at initial value"
+        },
+        {
+            "question_id": 1,
+            "student_response": "B",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "assignment_vs_equality"
+            ],
+            "notes": "Confused the increment value with result"
+        },
+        {
+            "question_id": 2,
+            "student_response": "A",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "type_coercion_error"
+            ],
+            "notes": "Confused float with int"
+        },
+        {
+            "question_id": 2,
+            "student_response": "C",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "type_coercion_error"
+            ],
+            "notes": "Confused decimal number with string"
+        },
+        {
+            "question_id": 3,
+            "student_response": "A",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "integer_division_confusion"
+            ],
+            "notes": "Expected regular division instead of floor division"
+        },
+        {
+            "question_id": 3,
+            "student_response": "D",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "integer_division_confusion"
+            ],
+            "notes": "Confused with modulo operator"
+        },
+        {
+            "question_id": 4,
+            "student_response": "B",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "wrong_condition_logic"
+            ],
+            "notes": "Didnt understand elif is not evaluated after if is true"
+        },
+        {
+            "question_id": 4,
+            "student_response": "C",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "wrong_condition_logic"
+            ],
+            "notes": "Doesnt understand condition evaluation"
+        },
+        {
+            "question_id": 4,
+            "student_response": "D",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "wrong_condition_logic"
+            ],
+            "notes": "Thinks both if and elif can execute"
+        },
+        {
+            "question_id": 5,
+            "student_response": "A",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "off_by_one"
+            ],
+            "notes": "Off by one on range understanding"
+        },
+        {
+            "question_id": 5,
+            "student_response": "C",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "off_by_one"
+            ],
+            "notes": "Thinks range includes end value"
+        },
+        {
+            "question_id": 6,
+            "student_response": "B",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "return_vs_print"
+            ],
+            "notes": "Confused return with no output"
+        },
+        {
+            "question_id": 7,
+            "student_response": "A",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "array_indexing_error"
+            ],
+            "notes": "Thinks indexing starts at 1"
+        },
+        {
+            "question_id": 7,
+            "student_response": "B",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "array_indexing_error"
+            ],
+            "notes": "Off by one in index"
+        },
+        {
+            "question_id": 9,
+            "student_response": "B",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "wrong_loop_condition"
+            ],
+            "notes": "Confusion about loop termination"
+        },
+        {
+            "question_id": 9,
+            "student_response": "C",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "wrong_loop_condition",
+                "off_by_one"
+            ],
+            "notes": "Added extra iteration"
+        },
+        {
+            "question_id": 10,
+            "student_response": "A",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "nested_loop_complexity"
+            ],
+            "notes": "Didnt account for nested loop"
+        },
+        {
+            "question_id": 10,
+            "student_response": "B",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "complexity_analysis_error"
+            ],
+            "notes": "Wrong complexity analysis"
+        },
+        {
+            "question_id": 10,
+            "student_response": "D",
+            "is_correct": false,
+            "expert_misconceptions": [
+                "complexity_analysis_error"
+            ],
+            "notes": "Confused O(2n) with O(n^2)"
+        }
+    ]
+}
