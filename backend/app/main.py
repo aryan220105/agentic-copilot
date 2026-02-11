@@ -72,8 +72,10 @@ def seed_database():
         if existing:
             return  # Already seeded
         
-        # Load seed questions
-        seed_path = "data/seed/questions.json"
+        # Load seed questions - check both paths (from backend/ and from project root)
+        seed_path = "../data/seed/questions.json"
+        if not os.path.exists(seed_path):
+            seed_path = "data/seed/questions.json"
         if not os.path.exists(seed_path):
             print("No seed data found, skipping...")
             return

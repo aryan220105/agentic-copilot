@@ -6,6 +6,7 @@ Handles the adaptive learning loop for students.
 from datetime import datetime
 from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from sqlmodel import Session, select
 
@@ -58,18 +59,26 @@ class ProgressResponse(BaseModel):
 # Pretest Routes
 # ─────────────────────────────────────────────────────────────
 
+PRETEST_QUESTION_LIMIT = 5
+POSTTEST_QUESTION_LIMIT = 5
+
+
 @router.get("/pretest")
 def get_pretest(session: Session = Depends(get_session)):
-    """Get pretest questions."""
-    questions = session.exec(
-        select(Question).where(Question.is_pretest == True)
+    """Get pretest questions (max 5)."""
+    all_pretest = session.exec(
+        select(Question).where(Question.is_pretest == True).order_by(Question.id)
     ).all()
+    questions = all_pretest[:PRETEST_QUESTION_LIMIT]
+    print(f"[Pretest] Returning {len(questions)} of {len(all_pretest)} pretest questions (limit={PRETEST_QUESTION_LIMIT})")
     
     if not questions:
-        # Return some default questions if none seeded
-        return {"questions": [], "message": "No pretest questions available"}
+        return JSONResponse(
+            content={"questions": [], "message": "No pretest questions available"},
+            headers={"Cache-Control": "no-store"}
+        )
     
-    return {
+    payload = {
         "questions": [
             {
                 "id": q.id,
@@ -82,6 +91,7 @@ def get_pretest(session: Session = Depends(get_session)):
             for q in questions
         ]
     }
+    return JSONResponse(content=payload, headers={"Cache-Control": "no-store"})
 
 
 @router.post("/pretest/submit")
@@ -322,10 +332,11 @@ def get_progress(student_id: int, session: Session = Depends(get_session)):
 
 @router.get("/posttest")
 def get_posttest(session: Session = Depends(get_session)):
-    """Get posttest questions."""
-    questions = session.exec(
-        select(Question).where(Question.is_posttest == True)
+    """Get posttest questions (max 5)."""
+    all_posttest = session.exec(
+        select(Question).where(Question.is_posttest == True).order_by(Question.id)
     ).all()
+    questions = all_posttest[:POSTTEST_QUESTION_LIMIT]
     
     return {
         "questions": [

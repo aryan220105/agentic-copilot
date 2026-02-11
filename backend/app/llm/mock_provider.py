@@ -27,6 +27,7 @@ class MockLLMProvider(LLMProvider):
         max_tokens: int = 1024
     ) -> str:
         """Generate deterministic mock response based on prompt content."""
+        print(f"[LLM] Mock generating (prompt length: {len(prompt)})")
         self.call_count += 1
         prompt_lower = prompt.lower()
         

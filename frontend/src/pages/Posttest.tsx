@@ -10,6 +10,7 @@ export default function Posttest({ studentId }: Props) {
     const navigate = useNavigate()
     const [questions, setQuestions] = useState<Question[]>([])
     const [answers, setAnswers] = useState<Record<number, string>>({})
+    const [currentSelection, setCurrentSelection] = useState<string>('')
     const [currentIndex, setCurrentIndex] = useState(0)
     const [loading, setLoading] = useState(true)
     const [submitting, setSubmitting] = useState(false)
@@ -30,9 +31,13 @@ export default function Posttest({ studentId }: Props) {
 
     const handleSubmit = async () => {
         setSubmitting(true)
+        const finalAnswers = { ...answers }
+        if (currentSelection && currentQ) {
+            finalAnswers[currentQ.id] = currentSelection
+        }
         const responses = questions.map(q => ({
             question_id: q.id,
-            response: answers[q.id] || ''
+            response: finalAnswers[q.id] || ''
         }))
 
         try {
@@ -121,7 +126,7 @@ export default function Posttest({ studentId }: Props) {
         )
     }
 
-    const progress = (Object.keys(answers).length / questions.length) * 100
+    const progress = ((currentIndex) / questions.length) * 100
 
     return (
         <div className="app-container">
@@ -149,8 +154,8 @@ export default function Posttest({ studentId }: Props) {
                             {Object.entries(currentQ.options).map(([key, value]) => (
                                 <div
                                     key={key}
-                                    className={`option-item ${answers[currentQ.id] === key ? 'selected' : ''}`}
-                                    onClick={() => setAnswers({ ...answers, [currentQ.id]: key })}
+                                    className={`option-item ${currentSelection === key ? 'selected' : ''}`}
+                                    onClick={() => setCurrentSelection(key)}
                                 >
                                     <span className="option-key">{key}</span>
                                     <span>{value}</span>
@@ -162,8 +167,8 @@ export default function Posttest({ studentId }: Props) {
                     {currentQ.type === 'coding' && (
                         <div className="code-editor">
                             <textarea
-                                value={answers[currentQ.id] || currentQ.starter_code || ''}
-                                onChange={(e) => setAnswers({ ...answers, [currentQ.id]: e.target.value })}
+                                value={currentSelection || currentQ.starter_code || ''}
+                                onChange={(e) => setCurrentSelection(e.target.value)}
                                 placeholder="Write your code here..."
                             />
                         </div>
@@ -172,21 +177,35 @@ export default function Posttest({ studentId }: Props) {
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 'var(--space-lg)' }}>
                         <button
                             className="btn btn-secondary"
-                            onClick={() => setCurrentIndex(i => i - 1)}
+                            onClick={() => {
+                                if (currentSelection && currentQ) {
+                                    setAnswers(prev => ({ ...prev, [currentQ.id]: currentSelection }))
+                                }
+                                const prevQ = questions[currentIndex - 1]
+                                setCurrentSelection(answers[prevQ?.id] || '')
+                                setCurrentIndex(i => i - 1)
+                            }}
                             disabled={currentIndex === 0}
                         >
                             ← Previous
                         </button>
 
                         {currentIndex < questions.length - 1 ? (
-                            <button className="btn btn-primary" onClick={() => setCurrentIndex(i => i + 1)}>
+                            <button className="btn btn-primary" onClick={() => {
+                                if (currentSelection && currentQ) {
+                                    setAnswers(prev => ({ ...prev, [currentQ.id]: currentSelection }))
+                                }
+                                const nextQ = questions[currentIndex + 1]
+                                setCurrentSelection(answers[nextQ?.id] || '')
+                                setCurrentIndex(i => i + 1)
+                            }}>
                                 Next →
                             </button>
                         ) : (
                             <button
                                 className="btn btn-success"
                                 onClick={handleSubmit}
-                                disabled={submitting}
+                                disabled={submitting || !currentSelection}
                             >
                                 {submitting ? 'Submitting...' : 'Submit Assessment'}
                             </button>

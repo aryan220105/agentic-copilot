@@ -34,6 +34,7 @@ class GroqLLMProvider(LLMProvider):
         max_tokens: int = 1024
     ) -> str:
         """Generate response using Groq API with retry logic."""
+        print(f"[LLM] Groq generating (prompt length: {len(prompt)})")
         if not self.api_key:
             raise ValueError("GROQ_API_KEY not configured")
         
