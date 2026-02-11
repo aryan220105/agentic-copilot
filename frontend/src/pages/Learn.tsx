@@ -225,6 +225,21 @@ export default function Learn({ studentId }: Props) {
                             </button>
                         )}
 
+                        {/* Advance / Review - no lesson or question, just a transition */}
+                        {!content.question && !content.content && (
+                            <div className="card" style={{ textAlign: 'center', padding: 'var(--space-xl)' }}>
+                                <h2 style={{ marginBottom: 'var(--space-md)' }}>
+                                    {content.action === 'advance' ? '🎉 Great job!' : '🔄 Let\'s review'}
+                                </h2>
+                                <p style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-lg)' }}>
+                                    {content.reason}
+                                </p>
+                                <button className="btn btn-primary" onClick={handleContinue}>
+                                    Continue to {content.concept} →
+                                </button>
+                            </div>
+                        )}
+
                         {/* Reason */}
                         <p style={{ marginTop: 'var(--space-lg)', color: 'var(--text-muted)', fontSize: 'var(--font-size-sm)' }}>
                             🤖 {content.reason}
